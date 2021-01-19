@@ -3,8 +3,8 @@
 using namespace std;
 
 #define MEM(a, b) memset(a, (b), sizeof(a))
-#define FOR(i, n) for (int i = 0; i < n; i++)
-#define RFOR(i, n) (int i = 0; i >= n; i--)
+#define FOR(i, k) for (int i = 0; i < k; i++)
+#define RFOR(i, k) for (int i = k - 1; i >= 0; i--)
 #define all(cont) cont.begin(), cont.end()
 #define rall(cont) cont.end(), cont.begin()
 #define EACH(it, l) for (auto it = l.begin(); it != l.end(); it++)
@@ -16,18 +16,18 @@ using namespace std;
 #define PI 3.1415926535897932384626433832795
 #define MOD 1000000007
 #define read(type) readInt<type>()
-#define print(t) cout << t << endl
+#define print(t) cout << t
 #define LL long long
-
-const int amax = 100;
 
 int main()
 {
-    int a[5] = {1, 2, 3, 4, 5};
-    int n = 5;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n, m;
+    cin >> n;
     FOR(i, n)
     {
-        print(a[i]);
+        cin >> m;
     }
     return 0;
 }

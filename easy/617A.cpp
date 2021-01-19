@@ -27,6 +27,8 @@ using namespace std;
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int count = 1, n;
     cin >> n;
     cout << n / 5;

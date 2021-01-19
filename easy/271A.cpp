@@ -23,6 +23,8 @@ const LL int amax = 100000;
 
 int main()
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
     int y;
     cin >> y;
     while (true)
