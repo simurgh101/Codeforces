@@ -5,5 +5,8 @@
         "**/templates/**/*.html": "django-html",
         "ostream": "cpp",
         "list": "cpp"
+    },
+    "files.exclude": {
+        "**/*.exe" : true
     }
 }
