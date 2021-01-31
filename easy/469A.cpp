@@ -18,9 +18,33 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
 
 const int amax = 100;
 
 int main()
 {
+    int n;
+    cin >> n;
+    set<int> levels;
+    int q, y;
+    cin >> q;
+    for (int i = 0; i < q; i++)
+    {
+        int x;
+        cin >> x;
+        levels.insert(x);
+    }
+    cin >> y;
+    for (int i = 0; i < y; i++)
+    {
+        int w;
+        cin >> w;
+        levels.insert(w);
+    }
+    if (levels.size() == n)
+        cout << "I become the guy.";
+    else
+        cout << "Oh, my keyboard!";
+    return 0;
 }
