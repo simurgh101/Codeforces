@@ -18,9 +18,15 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
+#define fast()                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0);                       \
+    cout.tie(0);
 
 const int amax = 100;
 
 int main()
 {
+    fast();
 }
