@@ -18,22 +18,29 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
+#define fast()                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0);                       \
+    cout.tie(0);
 
 const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
+    fast();
+    int n, k;
+    cin >> n >> k;
+    int minute = 240 - k;
+    int sum = 0;
+    int i = 1;
+    while (sum + (i * 5) <= minute)
     {
-        cin >> i;
+        sum = sum + (i * 5);
+        i++;
     }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
+    if (i > n)
+        cout << n;
+    else
+        cout << i - 1;
 }

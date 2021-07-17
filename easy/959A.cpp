@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -18,22 +19,20 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
+#define fast()                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0)
 
 const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
-    {
-        cin >> i;
-    }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
+    fast();
+    int n;
+    cin >> n;
+    if (n % 2)
+        print("Ehab");
+    else
+        print("Mahmoud");
 }

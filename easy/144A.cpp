@@ -24,10 +24,25 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
     int n, a;
+    int maxN = INT_MIN, minN = INT_MAX, minIndex = 0, maxIndex = 0;
     cin >> n;
     FOR(i, n)
     {
         cin >> a;
+        if (a > maxN)
+        {
+            maxN = a;
+            maxIndex = i;
+        }
+        if (a <= minN)
+        {
+            minN = a;
+            minIndex = i;
+        }
     }
+    if (maxIndex > minIndex)
+        cout << maxIndex - 1 + (n - minIndex) - 1;
+    else
+        cout << maxIndex - 1 + (n - minIndex);
     return 0;
 }

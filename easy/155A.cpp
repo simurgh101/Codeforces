@@ -21,13 +21,41 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int n, m;
+    int n, arr[1001], min = 10000, a = 0, max = 0, b = 0;
+    int c = 0;
     cin >> n;
-    FOR(i, n)
+
+    for (int i = 0; i < n; ++i)
     {
-        cin >> m;
+        cin >> arr[i];
+
+        if (max < arr[i])
+        {
+            max = arr[i];
+            a += 1;
+        }
+        if (min > arr[i])
+        {
+            min = arr[i];
+            b += 1;
+        }
+    }
+    c = a + b - 2;
+
+    if (a + b == n && max != min)
+    {
+        cout << (n - 1) << endl;
+    }
+    else
+    {
+        if (c < 0)
+        {
+            cout << "0" << endl;
+        }
+        else
+        {
+            cout << c << endl;
+        }
     }
     return 0;
 }

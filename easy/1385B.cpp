@@ -18,22 +18,42 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
+#define fast()                        \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0)
 
 const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
+    fast();
+    int t, n, a[110];
+    cin >> t;
+    while (t--)
     {
-        cin >> i;
+
+        cin >> n;
+        n *= 2;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> a[i];
+        }
+        int pos[110] = {};
+
+        vector<int> v;
+        for (int i = n - 1; i >= 0; i--)
+        {
+            if (pos[a[i]] == 0)
+            {
+                pos[a[i]] = 1;
+                v.push_back(a[i]);
+            }
+        }
+
+        int s = v.size();
+        for (int i = s - 1; i >= 0; i--)
+            cout << v[i] << " ";
+        cout << endl;
     }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
 }

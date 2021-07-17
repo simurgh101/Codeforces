@@ -23,17 +23,23 @@ const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
+    int n;
+    cin >> n;
+    int mw = 0, cw = 0;
+    FOR(i, n)
     {
-        cin >> i;
+        int m, c;
+        cin >> m >> c;
+        if (m > c)
+            mw++;
+        else if (m < c)
+            cw++;
     }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
+    // cout << cw << mw;
+    if (mw > cw)
+        cout << "Mishka";
+    else if (mw < cw)
+        cout << "Chris";
+    else
+        cout << "Friendship is magic!^^";
 }

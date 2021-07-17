@@ -18,22 +18,19 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
 
 const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
-    {
-        cin >> i;
-    }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
+    int n, k, l, c, d, p, nl, np;
+    cin >> n >> k >> l >> c >> d >> p >> nl >> np;
+    int t = k * l / nl;
+    int s = c * d;
+    p /= np;
+    int toast = INT_MAX;
+    toast = min(t, s);
+    toast = min(toast, p);
+    print(toast / n);
 }

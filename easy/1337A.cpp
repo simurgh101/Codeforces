@@ -23,17 +23,12 @@ const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
+    int n;
+    cin >> n;
+    while (n--)
     {
-        cin >> i;
+        int a, b, c, d;
+        cin >> a >> b >> c >> d;
+        cout << b << " " << c << " " << c << endl;
     }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
 }

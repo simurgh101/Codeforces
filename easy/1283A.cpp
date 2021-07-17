@@ -18,22 +18,18 @@ using namespace std;
 #define read(type) readInt<type>()
 #define print(t) cout << t << endl
 #define LL long long
+#define vt vector
 
 const int amax = 100;
 
 int main()
 {
-    vector<int> m(4);
-    for (auto &i : m)
+    int n;
+    cin >> n;
+    while (n--)
     {
-        cin >> i;
+        int h, m;
+        cin >> h >> m;
+        print(1440 - h * 60 - m);
     }
-    string s;
-    int answer = 0;
-    cin >> s;
-    for (int i = 0; i < s.length(); i++)
-    {
-        answer = answer + m[(s[i] - '0') - 1];
-    }
-    cout << answer;
 }
